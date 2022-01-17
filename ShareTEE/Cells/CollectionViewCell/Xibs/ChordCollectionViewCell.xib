@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Named colors" minToolsVersion="9.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ChordCollectionViewCell" id="gTV-IL-0wX" customClass="ChordCollectionViewCell" customModule="ShareTEE" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="dyn-pS-fgy">
+                        <rect key="frame" x="0.0" y="0.0" width="195" height="50"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="nGy-Gj-hkh">
+                                <rect key="frame" x="80.5" y="16.5" width="34.5" height="17.5"/>
+                                <fontDescription key="fontDescription" name="GeezaPro" family="Geeza Pro" pointSize="14"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="aOx-IA-eU6">
+                                <rect key="frame" x="0.0" y="46" width="195" height="4"/>
+                                <color key="backgroundColor" name="colorPrimary"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="4" id="x5h-c0-xZc"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="aOx-IA-eU6" secondAttribute="trailing" id="0G6-aI-D3K"/>
+                            <constraint firstItem="aOx-IA-eU6" firstAttribute="leading" secondItem="dyn-pS-fgy" secondAttribute="leading" id="6U2-5G-IUu"/>
+                            <constraint firstItem="nGy-Gj-hkh" firstAttribute="centerY" secondItem="dyn-pS-fgy" secondAttribute="centerY" id="Fbe-Al-4c0"/>
+                            <constraint firstAttribute="bottom" secondItem="aOx-IA-eU6" secondAttribute="bottom" id="Uue-EY-3Sz"/>
+                            <constraint firstItem="nGy-Gj-hkh" firstAttribute="centerX" secondItem="dyn-pS-fgy" secondAttribute="centerX" id="oEl-lW-QOU"/>
+                        </constraints>
+                    </view>
+                </subviews>
+            </view>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <constraints>
+                <constraint firstItem="dyn-pS-fgy" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="EhR-Rw-cM5"/>
+                <constraint firstAttribute="bottom" secondItem="dyn-pS-fgy" secondAttribute="bottom" id="J53-fi-1bA"/>
+                <constraint firstItem="dyn-pS-fgy" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="z6O-ZC-9WS"/>
+                <constraint firstAttribute="trailing" secondItem="dyn-pS-fgy" secondAttribute="trailing" id="zDe-3Y-0GU"/>
+            </constraints>
+            <size key="customSize" width="195" height="50"/>
+            <connections>
+                <outlet property="chordNameLabel" destination="nGy-Gj-hkh" id="b27-mu-Be3"/>
+                <outlet property="containerView" destination="dyn-pS-fgy" id="9WC-yv-XNk"/>
+                <outlet property="overlayView" destination="aOx-IA-eU6" id="E6r-ej-hKc"/>
+            </connections>
+            <point key="canvasLocation" x="216.66666666666669" y="65.625"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <namedColor name="colorPrimary">
+            <color red="0.23100000619888306" green="0.38400000333786011" blue="0.88200002908706665" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </namedColor>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

@@ -1,0 +1,6 @@
+framework module Pods_ShareTEE {
+  umbrella header "Pods-ShareTEE-umbrella.h"
+
+  export *
+  module * { export * }
+}

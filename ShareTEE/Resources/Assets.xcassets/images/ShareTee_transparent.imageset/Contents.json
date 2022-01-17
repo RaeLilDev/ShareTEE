@@ -1,0 +1,12 @@
+{
+  "images" : [
+    {
+      "filename" : "ShareTee_transparent.svg",
+      "idiom" : "universal"
+    }
+  ],
+  "info" : {
+    "author" : "xcode",
+    "version" : 1
+  }
+}
