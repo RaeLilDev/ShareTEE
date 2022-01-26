@@ -56,6 +56,9 @@
 		4DFCA495276F0B7200A34A1C /* LessonTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4DFCA493276F0B7200A34A1C /* LessonTableViewCell.xib */; };
 		4DFCA497276F145600A34A1C /* LessonModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCA496276F145600A34A1C /* LessonModel.swift */; };
 		4DFCA499276F14DB00A34A1C /* lessonManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4DFCA498276F14DB00A34A1C /* lessonManager.swift */; };
+		521D23C827A148FF00339357 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 521D23C727A148FF00339357 /* NotificationViewController.swift */; };
+		52C8114227A0FE030058C2C3 /* CardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8114127A0FE030058C2C3 /* CardView.swift */; };
+		52C8114427A0FE3F0058C2C3 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52C8114327A0FE3F0058C2C3 /* UIView+Extension.swift */; };
 		C53989870885C484BB6252C8 /* Pods_ShareTEE.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = EE4424C7B0976CEF72129AE9 /* Pods_ShareTEE.framework */; };
 /* End PBXBuildFile section */
 
@@ -115,6 +118,9 @@
 		4DFCA493276F0B7200A34A1C /* LessonTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LessonTableViewCell.xib; sourceTree = "<group>"; };
 		4DFCA496276F145600A34A1C /* LessonModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LessonModel.swift; sourceTree = "<group>"; };
 		4DFCA498276F14DB00A34A1C /* lessonManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = lessonManager.swift; sourceTree = "<group>"; };
+		521D23C727A148FF00339357 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		52C8114127A0FE030058C2C3 /* CardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardView.swift; sourceTree = "<group>"; };
+		52C8114327A0FE3F0058C2C3 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		EE4424C7B0976CEF72129AE9 /* Pods_ShareTEE.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ShareTEE.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F62B239DCB48AB8166A9816D /* Pods-ShareTEE.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ShareTEE.debug.xcconfig"; path = "Target Support Files/Pods-ShareTEE/Pods-ShareTEE.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -152,6 +158,7 @@
 		4DA654D9276A2D25008098E9 /* ShareTEE */ = {
 			isa = PBXGroup;
 			children = (
+				52C8113F27A0FDB30058C2C3 /* Extensions */,
 				4DA65502276A6579008098E9 /* Model */,
 				4DA654F6276A3FEC008098E9 /* Cells */,
 				4DA654F0276A2E4A008098E9 /* Delegate */,
@@ -166,6 +173,7 @@
 		4DA654EE276A2DDF008098E9 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				52C8114027A0FDED0058C2C3 /* CardView */,
 				4DA654E5276A2D27008098E9 /* LaunchScreen.storyboard */,
 				4DA654E0276A2D25008098E9 /* Main.storyboard */,
 				4DFCA48A276E2EE000A34A1C /* Learn.storyboard */,
@@ -188,6 +196,7 @@
 				4D859FEA277AF6C30010C487 /* AlbumSongViewController.swift */,
 				4D5E3415278310410045B760 /* HotViewController.swift */,
 				4D5E34212783642B0045B760 /* ChordDetailViewController.swift */,
+				521D23C727A148FF00339357 /* NotificationViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -313,6 +322,22 @@
 			path = Xibs;
 			sourceTree = "<group>";
 		};
+		52C8113F27A0FDB30058C2C3 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52C8114327A0FE3F0058C2C3 /* UIView+Extension.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52C8114027A0FDED0058C2C3 /* CardView */ = {
+			isa = PBXGroup;
+			children = (
+				52C8114127A0FE030058C2C3 /* CardView.swift */,
+			);
+			path = CardView;
+			sourceTree = "<group>";
+		};
 		A8D88F28C628F120D768CF81 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -341,6 +366,7 @@
 				4DA654D3276A2D25008098E9 /* Sources */,
 				4DA654D4276A2D25008098E9 /* Frameworks */,
 				4DA654D5276A2D25008098E9 /* Resources */,
+				31DC4184C35342441EE3C247 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -407,6 +433,23 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		31DC4184C35342441EE3C247 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareTEE/Pods-ShareTEE-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-ShareTEE/Pods-ShareTEE-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-ShareTEE/Pods-ShareTEE-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
 		880DE17C925D9836D65DAF59 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -441,12 +484,14 @@
 				4D5AF381277A0FE200736BA0 /* AlbumManager.swift in Sources */,
 				4D5E341A278353040045B760 /* ChordGroupModel.swift in Sources */,
 				4DFCA48F276EFC8E00A34A1C /* LessonViewController.swift in Sources */,
+				52C8114227A0FE030058C2C3 /* CardView.swift in Sources */,
 				4DFCA497276F145600A34A1C /* LessonModel.swift in Sources */,
 				4DFCA499276F14DB00A34A1C /* lessonManager.swift in Sources */,
 				4DA654DF276A2D25008098E9 /* ViewController.swift in Sources */,
 				4D5AF37627776B9C00736BA0 /* IndicatorCollectionViewCell.swift in Sources */,
 				4D5AF3732777447C00736BA0 /* ArtistManager.swift in Sources */,
 				4D5E34202783595D0045B760 /* ChordGroupManager.swift in Sources */,
+				52C8114427A0FE3F0058C2C3 /* UIView+Extension.swift in Sources */,
 				4DA65504276A65F1008098E9 /* CategoryModel.swift in Sources */,
 				4DBDF23927891C8100AF0CC5 /* ChordManager.swift in Sources */,
 				4DA65515276BAB0A008098E9 /* SongDetailViewController.swift in Sources */,
@@ -469,6 +514,7 @@
 				4DA65511276B766E008098E9 /* SongModel.swift in Sources */,
 				4DA654FA276A4031008098E9 /* SliderCollectionViewCell.swift in Sources */,
 				4DBDF23727891C4500AF0CC5 /* ChordModel.swift in Sources */,
+				521D23C827A148FF00339357 /* NotificationViewController.swift in Sources */,
 				4D5E34222783642B0045B760 /* ChordDetailViewController.swift in Sources */,
 				4DA65506276B28F8008098E9 /* SongViewController.swift in Sources */,
 				4DFCA491276F040A00A34A1C /* ChordViewController.swift in Sources */,

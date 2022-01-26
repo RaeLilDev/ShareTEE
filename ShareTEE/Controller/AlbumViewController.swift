@@ -73,6 +73,7 @@ extension AlbumViewController: UICollectionViewDataSource, UICollectionViewDeleg
     
     
     func collectionView(_ collectionView: UICollectionView, willDisplay cell: UICollectionViewCell, forItemAt indexPath: IndexPath) {
+    
         let lastElement = albumArray.count-1
         if indexPath.row == lastElement && isLoading && !isLastPage {
             isLoading = false

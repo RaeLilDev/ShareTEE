@@ -10,17 +10,15 @@ import UIKit
 class AlbumCollectionViewCell: UICollectionViewCell {
 
     @IBOutlet weak var albumCardView: UIView!
-    @IBOutlet weak var albumNameLabel: UILabel!
+    @IBOutlet weak var albumNameLbl: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
-        albumCardView.layer.cornerRadius = 12.0
     }
     
     
     func configure(with model: AlbumModel) {
-        albumNameLabel.text = model.album
+        albumNameLbl.text = model.album
     }
 
 }

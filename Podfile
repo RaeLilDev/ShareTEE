@@ -6,7 +6,8 @@ target 'ShareTEE' do
   use_frameworks!
 
   # Pods for ShareTEE
-
+  pod 'MarqueeLabel/Swift'
+  pod 'Alamofire', '~> 5.5'
   pod 'AlamofireImage', '~> 4.1'
 
 

@@ -32,6 +32,30 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="animationDelay">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scrollDuration">
+                                        <real key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="scrollRate">
+                                        <real key="value" value="2"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="leadingBuffer">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="trailingBuffer">
+                                        <real key="value" value="1"/>
+                                    </userDefinedRuntimeAttribute>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="labelize" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="holdScrolling" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="tapToScroll" value="YES"/>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="forceScrolling" value="YES"/>
+                                </userDefinedRuntimeAttributes>
                             </label>
                         </subviews>
                         <color key="backgroundColor" name="colorSecondary"/>
@@ -54,7 +78,7 @@
             <size key="customSize" width="182" height="107"/>
             <connections>
                 <outlet property="albumCardView" destination="JX3-F0-vfS" id="usa-g3-oQy"/>
-                <outlet property="albumNameLabel" destination="n64-7G-HaI" id="Zpn-N1-ttJ"/>
+                <outlet property="albumNameLbl" destination="n64-7G-HaI" id="Rvc-cG-8J2"/>
             </connections>
             <point key="canvasLocation" x="207.24637681159422" y="101.45089285714285"/>
         </collectionViewCell>

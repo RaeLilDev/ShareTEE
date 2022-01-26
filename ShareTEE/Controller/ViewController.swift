@@ -12,6 +12,7 @@ class ViewController: UIViewController {
     @IBOutlet weak var sliderCollectionView: UICollectionView!
     @IBOutlet weak var categoryCollectionView: UICollectionView!
     @IBOutlet weak var pageControlSlider: UIPageControl!
+    @IBOutlet weak var notificationImageView: UIImageView!
     
     let categories: [CategoryModel] = [
         CategoryModel(image: #imageLiteral(resourceName: "song"), name: "Song"),
@@ -25,6 +26,11 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+            notificationImageView.isUserInteractionEnabled = true
+            notificationImageView.addGestureRecognizer(tapGestureRecognizer)
+        
         // Do any additional setup after loading the view.
         sliderCollectionView.dataSource = self
         sliderCollectionView.delegate = self
@@ -35,6 +41,14 @@ class ViewController: UIViewController {
         categoryCollectionView.register(UINib(nibName: "CategoryCollectionViewCell", bundle: nil), forCellWithReuseIdentifier: "CategoryCollectionViewCell")
         
     }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer)
+    {
+       // let tappedImage = tapGestureRecognizer.view as! UIImageView
+        self.performSegue(withIdentifier: "GoToNotification", sender: self)
+        // Your action
+    }
+    
 }
 
 extension ViewController: UICollectionViewDataSource, UICollectionViewDelegateFlowLayout {

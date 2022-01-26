@@ -70,6 +70,653 @@
             </objects>
             <point key="canvasLocation" x="829" y="-864"/>
         </scene>
+        <!--Notification View Controller-->
+        <scene sceneID="aI7-x1-n9N">
+            <objects>
+                <viewController id="EAA-QQ-6pc" customClass="NotificationViewController" customModule="ShareTEE" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="6Kd-mj-1tE">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="O23-59-pl6">
+                                <rect key="frame" x="0.0" y="44" width="414" height="50"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifiation" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ftp-cz-O4R">
+                                        <rect key="frame" x="157.5" y="12.5" width="99" height="25"/>
+                                        <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="kZB-K4-FdS">
+                                        <rect key="frame" x="16" y="9" width="32" height="32"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="32" id="QtJ-jR-UpY"/>
+                                            <constraint firstAttribute="height" constant="32" id="faa-lH-t7X"/>
+                                        </constraints>
+                                    </imageView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="kZB-K4-FdS" firstAttribute="leading" secondItem="O23-59-pl6" secondAttribute="leading" constant="16" id="HqY-I6-cLw"/>
+                                    <constraint firstItem="kZB-K4-FdS" firstAttribute="centerY" secondItem="O23-59-pl6" secondAttribute="centerY" id="SH7-6a-ZZN"/>
+                                    <constraint firstItem="ftp-cz-O4R" firstAttribute="centerY" secondItem="O23-59-pl6" secondAttribute="centerY" id="YYw-UP-KCG"/>
+                                    <constraint firstItem="ftp-cz-O4R" firstAttribute="centerX" secondItem="O23-59-pl6" secondAttribute="centerX" id="lzt-RB-mAe"/>
+                                    <constraint firstAttribute="height" constant="50" id="zey-Db-hrR"/>
+                                </constraints>
+                            </view>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" showsHorizontalScrollIndicator="NO" translatesAutoresizingMaskIntoConstraints="NO" id="OAi-DX-Z7i">
+                                <rect key="frame" x="0.0" y="94" width="414" height="802"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="4NM-cZ-d98">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="805.5"/>
+                                        <subviews>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Z9v-uL-Vfw">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="73"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareTee" translatesAutoresizingMaskIntoConstraints="NO" id="yfF-Be-cGu">
+                                                        <rect key="frame" x="8" y="8" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="GAs-Sb-GUe"/>
+                                                            <constraint firstAttribute="width" constant="40" id="YU9-ab-PLA"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NTa-k3-Sci" customClass="CardView" customModule="ShareTEE" customModuleProvider="target">
+                                                        <rect key="frame" x="58" y="8" width="330" height="57"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="We have added new requested songs. We hope you enjoyed that songs." textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pf8-M4-Soa">
+                                                                <rect key="frame" x="8" y="8" width="314" height="41"/>
+                                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                <nil key="textColor"/>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="colorSecondary"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="bottom" secondItem="pf8-M4-Soa" secondAttribute="bottom" constant="8" id="PDn-va-Iuw"/>
+                                                            <constraint firstItem="pf8-M4-Soa" firstAttribute="top" secondItem="NTa-k3-Sci" secondAttribute="top" constant="8" id="cvh-l4-3rG"/>
+                                                            <constraint firstItem="pf8-M4-Soa" firstAttribute="leading" secondItem="NTa-k3-Sci" secondAttribute="leading" constant="8" id="d9d-ex-qsq"/>
+                                                            <constraint firstAttribute="trailing" secondItem="pf8-M4-Soa" secondAttribute="trailing" constant="8" id="qmR-EL-93Y"/>
+                                                        </constraints>
+                                                        <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="8"/>
+                                                    </view>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="26"/>
+                                            </stackView>
+                                            <stackView opaque="NO" contentMode="scaleToFill" alignment="bottom" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="BXA-nW-shx">
+                                                <rect key="frame" x="0.0" y="73" width="414" height="732.5"/>
+                                                <subviews>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ShareTee" translatesAutoresizingMaskIntoConstraints="NO" id="eRa-Rj-wtm">
+                                                        <rect key="frame" x="8" y="684.5" width="40" height="40"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="40" id="47b-TM-Z8K"/>
+                                                            <constraint firstAttribute="width" constant="40" id="L0r-1n-oF7"/>
+                                                        </constraints>
+                                                    </imageView>
+                                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Gtm-o6-SWn" customClass="CardView" customModule="ShareTEE" customModuleProvider="target">
+                                                        <rect key="frame" x="58" y="8" width="330" height="716.5"/>
+                                                        <subviews>
+                                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" usesAttributedText="YES" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontForContentSizeCategory="YES" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bI7-hW-5lB">
+                                                                <rect key="frame" x="8" y="8" width="314" height="700.5"/>
+                                                                <attributedString key="attributedText">
+                                                                    <fragment content="ပြည်တော်ဝင်ဖို့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ရုန်းကြစို့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content"> 
+
+( </string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="စခ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="တွေ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အသည်းအသန်ကြောက်နေလို့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ပိုအားပါလာတာ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content"> )
+
+</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="နိုင်ငံတကာမှာ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="တနိုင်ငံလုံးက">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="သူတို့ကို">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="မထောက်ခံဘူးဆိုတာ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="လူသိရှင်ကြား">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အရှက်ကွဲတာမို့ကြောက်ကြတာနေမယ်">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content" base64-UTF8="YES">
+Cgo
+</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="မရမကဖျက်မှာမို့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဥာဏ်နဲ့ယှဉ်ပြီး">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အနိုင်ယူကြပါစို့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content">
+( </string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဆိုင်တွေ၊">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အလုပ်တွေ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ပိတ်စရာမလိုပါ၊">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="မနက်">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="၁၀">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="နာရီ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="မတိုင်ခင်သွား၊">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="၁၀">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="နာရီကနေ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ညနေ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="၄">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အတွင်း">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဘယ်မှ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="မထွက်ရအောင်">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ကြိုတင်ပြင်ဆင်၊">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ထမင်းချိုင့်">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဘာညာက">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အစ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ကြိုထည့်သွားကြတာပေါ့">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content"> ) 
+
+</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ကိုယ့်ဖာသာ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အိမ်ထဲ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အဆောက်အဦထဲနေတာ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဘယ်သူတွေက">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="ဘယ်လိုတားလို့ရမှာလဲ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment>
+                                                                        <string key="content"> ? 
+
+</string>
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="လုံးဝ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="2" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="2" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content="အုပ်ချုပ်ခွင့်မရစေရ">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" size="17" name="NotoSansMyanmar-Regular"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="2" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                    <fragment content=" ✊✊✊">
+                                                                        <attributes>
+                                                                            <color key="NSColor" systemColor="systemGrayColor"/>
+                                                                            <font key="NSFont" metaFont="system" size="17"/>
+                                                                            <paragraphStyle key="NSParagraphStyle" alignment="natural" lineBreakMode="wordWrapping" baseWritingDirection="natural" paragraphSpacingBefore="2" tighteningFactorForTruncation="0.0"/>
+                                                                        </attributes>
+                                                                    </fragment>
+                                                                </attributedString>
+                                                                <nil key="highlightedColor"/>
+                                                            </label>
+                                                        </subviews>
+                                                        <color key="backgroundColor" name="colorSecondary"/>
+                                                        <constraints>
+                                                            <constraint firstItem="bI7-hW-5lB" firstAttribute="top" secondItem="Gtm-o6-SWn" secondAttribute="top" constant="8" id="IRs-LN-YdZ"/>
+                                                            <constraint firstAttribute="trailing" secondItem="bI7-hW-5lB" secondAttribute="trailing" constant="8" id="WrD-FS-NZA"/>
+                                                            <constraint firstAttribute="bottom" secondItem="bI7-hW-5lB" secondAttribute="bottom" constant="8" id="fOX-Sf-XCz"/>
+                                                            <constraint firstItem="bI7-hW-5lB" firstAttribute="leading" secondItem="Gtm-o6-SWn" secondAttribute="leading" constant="8" id="vku-vU-Jf7"/>
+                                                        </constraints>
+                                                    </view>
+                                                </subviews>
+                                                <directionalEdgeInsets key="directionalLayoutMargins" top="8" leading="8" bottom="8" trailing="26"/>
+                                            </stackView>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="4NM-cZ-d98" firstAttribute="bottom" secondItem="aFV-gx-mRj" secondAttribute="bottom" id="1dC-ua-1hM"/>
+                                    <constraint firstItem="4NM-cZ-d98" firstAttribute="width" secondItem="c0Q-wW-DuX" secondAttribute="width" id="5O7-6t-Wss"/>
+                                    <constraint firstItem="4NM-cZ-d98" firstAttribute="top" secondItem="aFV-gx-mRj" secondAttribute="top" id="cw3-lM-Rhf"/>
+                                    <constraint firstItem="4NM-cZ-d98" firstAttribute="trailing" secondItem="aFV-gx-mRj" secondAttribute="trailing" id="j54-jT-697"/>
+                                    <constraint firstItem="4NM-cZ-d98" firstAttribute="leading" secondItem="aFV-gx-mRj" secondAttribute="leading" id="jcK-ch-SIX"/>
+                                </constraints>
+                                <viewLayoutGuide key="contentLayoutGuide" id="aFV-gx-mRj"/>
+                                <viewLayoutGuide key="frameLayoutGuide" id="c0Q-wW-DuX"/>
+                            </scrollView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="nlH-Eh-muu"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="O23-59-pl6" firstAttribute="leading" secondItem="nlH-Eh-muu" secondAttribute="leading" id="Icx-aF-5yi"/>
+                            <constraint firstItem="O23-59-pl6" firstAttribute="top" secondItem="nlH-Eh-muu" secondAttribute="top" id="Ria-R4-s9P"/>
+                            <constraint firstItem="O23-59-pl6" firstAttribute="trailing" secondItem="nlH-Eh-muu" secondAttribute="trailing" id="aW1-dI-QU6"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="backImageView" destination="kZB-K4-FdS" id="IBv-t8-wYi"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="1Ge-cL-kMo" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-894.20289855072474" y="-881.25"/>
+        </scene>
         <!--LearnVC-->
         <scene sceneID="RlI-ks-u8V">
             <objects>
@@ -172,6 +819,7 @@
                     </view>
                     <connections>
                         <outlet property="categoryCollectionView" destination="fzt-VI-2FY" id="mib-Td-zyl"/>
+                        <outlet property="notificationImageView" destination="lXl-Nb-gza" id="QSE-VW-9f7"/>
                         <outlet property="pageControlSlider" destination="k5b-Zy-6uL" id="CjT-K6-eKD"/>
                         <outlet property="sliderCollectionView" destination="g0S-7w-pus" id="86m-oa-pRH"/>
                         <segue destination="lsb-gC-aMc" kind="presentation" identifier="GoToSong" modalPresentationStyle="fullScreen" id="fno-Ga-3HA"/>
@@ -179,6 +827,7 @@
                         <segue destination="yhT-e3-VJZ" kind="presentation" identifier="GoToArtist" modalPresentationStyle="fullScreen" id="B0H-bJ-aIh"/>
                         <segue destination="Whe-JF-tqO" kind="presentation" identifier="GoToAlbum" modalPresentationStyle="fullScreen" id="0y1-wS-Rtw"/>
                         <segue destination="SvT-ca-UhT" kind="presentation" identifier="GoToHot" modalPresentationStyle="fullScreen" id="1w2-MJ-kB5"/>
+                        <segue destination="EAA-QQ-6pc" kind="presentation" identifier="GoToNotification" modalPresentationStyle="fullScreen" id="tic-fR-Xl5"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -548,11 +1197,16 @@
                                     <constraint firstAttribute="height" constant="50" id="5uk-Vw-WY6"/>
                                 </constraints>
                             </view>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qno-HT-qjq">
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Song Name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qno-HT-qjq">
                                 <rect key="frame" x="151.5" y="56.5" width="111" height="25"/>
                                 <fontDescription key="fontDescription" name="GeezaPro-Bold" family="Geeza Pro" pointSize="20"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="fadeLength">
+                                        <real key="value" value="0.0"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="back" translatesAutoresizingMaskIntoConstraints="NO" id="mts-ai-IrD">
                                 <rect key="frame" x="16" y="55" width="28" height="28"/>
@@ -592,7 +1246,7 @@
                             <constraint firstItem="Wsn-bP-IAx" firstAttribute="centerX" secondItem="PwK-bn-36R" secondAttribute="centerX" id="4N6-Nn-fki"/>
                             <constraint firstItem="Wsn-bP-IAx" firstAttribute="top" secondItem="qno-HT-qjq" secondAttribute="bottom" id="A80-ED-Xkw"/>
                             <constraint firstItem="mts-ai-IrD" firstAttribute="leading" secondItem="3gK-IV-hp6" secondAttribute="leading" constant="16" id="C4G-Im-O1i"/>
-                            <constraint firstItem="qno-HT-qjq" firstAttribute="centerX" secondItem="P4W-4s-wgy" secondAttribute="centerX" id="GVI-SW-M7G"/>
+                            <constraint firstItem="qno-HT-qjq" firstAttribute="centerX" secondItem="PwK-bn-36R" secondAttribute="centerX" id="HsZ-GS-hZv"/>
                             <constraint firstAttribute="trailing" secondItem="4qg-Bv-OF9" secondAttribute="trailing" id="PUq-0O-hDQ"/>
                             <constraint firstAttribute="bottom" secondItem="4qg-Bv-OF9" secondAttribute="bottom" id="UBn-8R-FHi"/>
                             <constraint firstItem="qno-HT-qjq" firstAttribute="centerY" secondItem="P4W-4s-wgy" secondAttribute="centerY" id="Zpg-wY-D6J"/>
@@ -609,7 +1263,7 @@
                         <outlet property="backImageView" destination="mts-ai-IrD" id="1Sb-01-O5t"/>
                         <outlet property="chordImageView" destination="mt6-Cn-I3k" id="V6Q-ew-SJf"/>
                         <outlet property="constraintHeight" destination="KK9-EB-heV" id="uRj-Bm-zso"/>
-                        <outlet property="songNameLabel" destination="qno-HT-qjq" id="sHL-qk-JAT"/>
+                        <outlet property="songNameLabel" destination="Wsn-bP-IAx" id="QMV-eq-EHt"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="mRE-uh-nq9" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -621,11 +1275,15 @@
         <segue reference="g3E-bZ-oVX"/>
     </inferredMetricsTieBreakers>
     <resources>
+        <image name="ShareTee" width="1000" height="1000"/>
         <image name="back" width="24" height="24"/>
         <image name="menu" width="24" height="24"/>
         <image name="notification" width="24" height="24"/>
         <namedColor name="colorLightGray">
             <color red="0.76499998569488525" green="0.76099997758865356" blue="0.76800000667572021" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+        </namedColor>
+        <namedColor name="colorSecondary">
+            <color red="0.9570000171661377" green="0.97299998998641968" blue="0.98400002717971802" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="colorSeparator">
             <color red="0.75900000333786011" green="0.82400000095367432" blue="1" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
@@ -635,6 +1293,9 @@
         </namedColor>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemGrayColor">
+            <color red="0.55686274509803924" green="0.55686274509803924" blue="0.57647058823529407" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>
